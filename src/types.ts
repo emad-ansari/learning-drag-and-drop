@@ -1,7 +1,10 @@
 export type Status = "Todo" | "Completed" | "Progress";
 
+
+export type Id = number | string;
+
 export interface Task {
-	id: string;
+	id: Id,
 	title: string;
 	status: Status;
 }
@@ -44,7 +47,7 @@ export const todos: Task[] = [
 	},
 ];
 
-export const TASK_SECTION: { id: string; title: string }[] = [
+export const COLUMN: { id: Id; title: string }[] = [
 	{
 		id: "1",
 		title: "Todo",
